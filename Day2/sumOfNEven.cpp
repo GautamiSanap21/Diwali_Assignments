@@ -13,7 +13,7 @@ bool isEven(int num){
 int sumUptoN(int n){
     int sum = 0;
     for (int i = 1; i <= n; i++) {
-        sum += 2 * i;  // ith even number is 2*i
+        sum += 2 * i;  
     }
     return sum;
 }
