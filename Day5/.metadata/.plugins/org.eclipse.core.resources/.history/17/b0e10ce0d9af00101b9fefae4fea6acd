@@ -1,0 +1,27 @@
+package com.demo.beans;
+
+public class Employee {
+private String empName;
+private int empID;
+private String empRole;
+
+public Employee() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+public Employee(String empName, int empID, String empRole) {
+	super();
+	this.empName = empName;
+	this.empID = empID;
+	this.empRole = empRole;
+}
+public Employee(int empID) {
+	super();
+	this.empID = empID;
+}
+public Employee(String empName) {
+	super();
+	this.empName = empName;
+}
+
+}

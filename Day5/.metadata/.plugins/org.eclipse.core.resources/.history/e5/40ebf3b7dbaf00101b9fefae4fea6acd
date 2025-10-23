@@ -1,0 +1,22 @@
+package com.demo.service;
+
+import java.util.Scanner;
+
+import com.demo.beans.Employee;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Override
+	public boolean addNewEmployee() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Employee Id:");
+		int eid=sc.nextInt();
+		System.out.println("Enter Employee Name:");
+		String ename=sc.next();
+		System.out.println("Enter Employee Role:");
+		String erole=sc.next();
+		Employee e = new Employee(ename,eid,erole);
+		return false;
+	}
+
+}

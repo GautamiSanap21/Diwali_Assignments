@@ -1,0 +1,49 @@
+package com.demo.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.demo.beans.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+	static List<Employee> emplist;
+	static {
+		emplist = new ArrayList<>();
+		emplist.add(new Employee("Shivam", 23, "Hr"));
+		emplist.add(new Employee("Shivani", 11, "Desihner"));
+		emplist.add(new Employee("Roshan", 73, "Developer"));
+	}
+
+	@Override
+	public boolean save(Employee e) {
+		return emplist.add(e);
+		
+	}
+
+	@Override
+	public boolean deleteById(int id) {
+		return emplist.remove(new Employee(id));
+	}
+
+	@Override
+	public List<Employee> showData() {
+		// TODO Auto-generated method stub
+		return emplist;
+	}
+
+	@Override
+	public List<Employee> sortById() {
+		List<Employee> lst=new ArrayList<>();
+		for(Employee e:emplist) {
+			lst.add(e);
+		}
+	
+		Comparator<Employee> c=(o1,o2)->{
+			System.out.println("In functional comparator");
+			return o1.getEid()-o2.getEid();
+		};
+		lst.sort(c);
+		return lst;
+	}
+
+}

@@ -1,0 +1,23 @@
+package com.demo.test;
+
+import java.util.Scanner;
+
+public class TestEmployee {
+
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	int choice =0;
+	do {
+		System.out.println("1. Add Employee to list");
+		System.out.println("2. Remove Employee list");
+		System.out.println("3. Show all Employee");
+		System.out.println("4. Show all Employee in sorted order (sort on the basis of empID)");
+		System.out.println("5. Find a Employee with empName");
+		System.out.println("6. Save all Employees into file");
+		System.out.println("7. Quit");
+		
+	}while(choice!=7);
+
+	}
+
+}

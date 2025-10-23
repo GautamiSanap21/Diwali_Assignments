@@ -1,0 +1,23 @@
+package com.demo.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.demo.beans.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+	static List<Employee> emplist;
+	static {
+		emplist = new ArrayList<>();
+		emplist.add(new Employee("Shivam", 23, "Hr"));
+		emplist.add(new Employee("Shivani", 11, "Desihner"));
+		emplist.add(new Employee("Roshan", 73, "Developer"));
+	}
+
+	@Override
+	public boolean save(Employee e) {
+		emplist.add(e);
+		return false;
+	}
+
+}
